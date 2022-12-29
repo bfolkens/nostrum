@@ -4065,6 +4065,7 @@ defmodule Nostrum.Api do
   def bangify(to_bang) do
     case to_bang do
       {:error, error} ->
+        IO.inspect(to_bang)
         raise(error)
 
       {:ok, body} ->
